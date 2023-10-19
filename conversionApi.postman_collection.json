@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "68c1182c-0318-4194-8274-04c2927a1275",
+		"name": "conversionApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "converted record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"id\":1001,\r\n    \"pwd\":\"123@pass\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8189/convesionApi/convertRecord?apiId=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8189",
+					"path": [
+						"convesionApi",
+						"convertRecord"
+					],
+					"query": [
+						{
+							"key": "apiId",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"apiNumber\":200,\r\n    \"tenantId\": 139,\r\n    \"apiName\": \"getToken\",\r\n    \"incomingColumnName\":\"token\",\r\n    \"outgoingColumnName\":\"TokenNumber\",\r\n\r\n    \"direction\":\"incoming\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8189/convesionApi/saveData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8189",
+					"path": [
+						"convesionApi",
+						"saveData"
+					],
+					"query": [
+						{
+							"key": "urlId",
+							"value": "100",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertRecords",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tokenid\": \"G47120102024828500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8189/convesionApi/convertRecords?apiId=202",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8189",
+					"path": [
+						"convesionApi",
+						"convertRecords"
+					],
+					"query": [
+						{
+							"key": "apiId",
+							"value": "202"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save incoming and outgoing feild",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"apiNumber\":100,\r\n    \"tenantId\": 139,\r\n    \"apiName\": \"login\",\r\n    \"incomingColumnName\":\"id\",\r\n    \"outgoingColumnName\":\"UserId\",\r\n    \"direction\":\"incoming\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8189/convesionApi/saveData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8189",
+					"path": [
+						"convesionApi",
+						"saveData"
+					],
+					"query": [
+						{
+							"key": "urlId",
+							"value": "100",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenAmount(Swantantra Api)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"TokenNumber\": \"G47120102024828500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.21.0.39:9217/Kiya.aiCBS-10.2.0/getTokenAmount",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"39"
+					],
+					"port": "9217",
+					"path": [
+						"Kiya.aiCBS-10.2.0",
+						"getTokenAmount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDemandBySfo(Swatantra Api)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tenantId\": 139,\r\n    \"branchCode\": 410008,\r\n    \"operDate\": \"04-05-2022\",\r\n    \"sfoCode\": \"10006\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.21.0.39:9217/Kiya.aiCBS-10.2.0/NonCBS/getDemandBySfo",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"39"
+					],
+					"port": "9217",
+					"path": [
+						"Kiya.aiCBS-10.2.0",
+						"NonCBS",
+						"getDemandBySfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"urlId\": 202,\r\n    \"urlName\": \"Token\",\r\n    \"serviceUrl\": \"http://172.21.0.39:9217/Kiya.aiCBS-10.2.0/getTokenAmount\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8189/convesionApi/saveUrlData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8189",
+					"path": [
+						"convesionApi",
+						"saveUrlData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
